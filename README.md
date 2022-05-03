@@ -16,8 +16,10 @@
 
 ## 给Eureka注册中心添加认证
 
+[Eureka 注册中心添加认证](./eureka-security-server/eurekaSecurityServer.md)
 
 
+## 使用 Ribbon 进行服务调用的负载均衡
 
 
 

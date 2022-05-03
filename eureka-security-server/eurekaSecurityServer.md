@@ -78,6 +78,8 @@ eureka:
 
 * 以application-security.yml配置运行eureka-client，可以在注册中心界面看到eureka-client已经成功注册
 
+[comment]: <> (//TODO 登录认证有些问题)
+
 ### Eureka的常用配置
 
 ``` 
