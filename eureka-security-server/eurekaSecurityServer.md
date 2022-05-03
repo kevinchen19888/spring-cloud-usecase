@@ -104,7 +104,7 @@ eureka:
 
 使用到的模块:
 ``` 
-springcloud-learning
+spring-cloud-usecase
 ├── eureka-server -- eureka注册中心
 ├── eureka-security-server -- 带登录认证的eureka注册中心
 └── eureka-client -- eureka客户端

@@ -22,6 +22,11 @@
 
 [Ribbon 进行服务调用的负载均衡](/ribbon-service/ribbonService.md)
 
+## 使用 Gateway 网关
+
+[Gateway 网关搭建](/api-gateway/apiGateway.md)
+
+
 
 
 

@@ -21,6 +21,7 @@
         <module>common</module>
         <module>user-service</module>
         <module>ribbon-service</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>

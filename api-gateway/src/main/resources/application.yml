@@ -1,0 +1,49 @@
+server:
+  port: 9201
+service-url:
+  user-service: http://localhost:8201
+spring:
+  redis:
+    host: localhost
+    password: 123456
+    port: 6379
+  cloud:
+    gateway:
+      routes:
+        - id: path_route #路由的ID
+          uri: ${service-url.user-service}/user/{id} #匹配后路由地址
+          predicates: # 断言，路径相匹配的进行路由
+            - Path=/user/{id}
+          filters:
+            - name: Hystrix # 断路器相关配置
+              args:
+                name: fallbackcmd
+                fallbackUri: forward:/fallback
+        - id: requestratelimiter_route  # 基于 RequestRateLimiter 进行限流
+          uri: http://localhost:8201
+          predicates:
+            - Method=GET
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1 #每秒允许处理的请求数量
+                redis-rate-limiter.burstCapacity: 2 #每秒最大处理的请求数量
+                key-resolver: "#{@ipKeyResolver}" #限流策略，对应策略的Bean
+
+        - id: retry_route # 对路由请求进行重试的过滤器
+          uri: http://localhost:8201
+          predicates:
+            - Method=GET
+          filters:
+            - name: Retry
+              args:
+                retries: 1 #需要进行重试的次数
+                statuses: BAD_GATEWAY #返回哪个状态码需要进行重试，返回状态码为5XX进行重试
+                backoff:
+                  firstBackoff: 10ms
+                  maxBackoff: 50ms
+                  factor: 2
+                  basedOnPreviousValue: false
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

@@ -138,7 +138,7 @@ user-service:
 
 * 使用到的模块
 ``` 
-springcloud-learning
+spring-cloud-usecase
 ├── eureka-server -- eureka注册中心
 ├── user-service -- 提供User对象CRUD接口的服务
 └── ribbon-service -- ribbon服务调用测试服务
