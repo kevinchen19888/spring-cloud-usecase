@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.kevin.cloud</groupId>
-    <artifactId>springcloud-usecase</artifactId>
+    <artifactId>spring-cloud-usecase</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>

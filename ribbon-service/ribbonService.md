@@ -102,7 +102,7 @@ public class RibbonConfig {
 * 负载均衡功能演示
     1. 启动eureka-server于8001端口；
     1. 启动user-service于8201端口,并启动另一个user-service于8202端口，可以通过修改IDEA中的SpringBoot的启动配置实现：
-    1. 调用接口进行测试：http://localhost:8301/user/1,可以发现运行在8201和8202的user-service控制台交替打印请求信息：
+    1. 调用接口进行测试：`http://localhost:8301/user/1`, 可以发现运行在8201和8202的user-service控制台交替打印请求信息：
     
 * Ribbon的常用配置
 ``` 
