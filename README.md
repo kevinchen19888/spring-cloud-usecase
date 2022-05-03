@@ -1,4 +1,5 @@
 # Spring Cloud 使用实例
+
 本项目基于 Spring Cloud 的版本为: Greenwich.SR2,对应 Spring Boot 版本为:2.1X(2.1.7);
 
 ## 搭建Eureka注册中心
@@ -6,7 +7,6 @@
 [Eureka 注册中心搭建](./eureka-server/eurekaServer.md)
 
 ## 搭建Eureka客户端
-
 
 [Eureka 客户端搭建](./eureka-client/eurekaClient.md)
 
@@ -18,9 +18,9 @@
 
 [Eureka 注册中心添加认证](./eureka-security-server/eurekaSecurityServer.md)
 
-
 ## 使用 Ribbon 进行服务调用的负载均衡
 
+[Ribbon 进行服务调用的负载均衡](/ribbon-service/ribbonService.md)
 
 
 

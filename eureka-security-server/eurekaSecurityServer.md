@@ -53,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-* 运行eureka-security-server，访问http://localhost:8004发现需要输入用户名&密码进行登录认证;
+* 运行eureka-security-server，访问`http://localhost:8004`, 发现需要输入用户名&密码进行登录认证;
 
 ###  eureka-client注册到有登录认证的注册中心
 
